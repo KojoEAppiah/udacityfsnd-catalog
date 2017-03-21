@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <h2>edit item</h2>
+
+    <form method="post">
+
+      <label>
+       	<div>name</div>
+        <textarea name="name">{{item.name}}</textarea>
+      </label>
+
+      <label>
+        <div>description</div>
+        <textarea name="description">{{item.description}}</textarea>
+      </label>
+
+      <label>
+       	<div>catagory</div>
+        <select name="catagory">
+          {% for catagory in catagories %}
+              <option value="{{catagory.name}}">{{catagory.name}}</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <div class="error">{{error}}</div>
+
+      <input type="submit">
+    </form>
+
+{% endblock %}

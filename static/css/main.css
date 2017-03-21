@@ -1,0 +1,21 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#catagories{
+	font-size: 33px;
+}
+
+.main-title{
+	font-size: 45px;
+	font-style: bold;
+	text-align: center;
+}
+
+.selected{
+
+	background-color: orange;
+}

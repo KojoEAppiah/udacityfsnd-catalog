@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/css/main.css" />
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <title>Catalog</title>
+</head>
+
+<body>
+  <a href="/catalog" class="main-title">
+    Catalog App
+  </a>
+
+
+  <div class="login-area">
+      <a class="login-link" href="/login">login</a>
+      |
+      <a class="login-link" href="/gdisconnect">logout</a>
+  </div>
+
+  <div id="content">
+  {% block content %} 
+  {% endblock %}
+  </div>
+
+  <script src='https://code.jquery.com/jquery-3.2.0.min.js'></script>
+  <script type="text/javascript" src="/static/catalog.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-6">
+			<h2> {{item.name}} (<a href="/catalog/{{item.catagory_name}}/items"> {{item.catagory_name}} </a>)</h2>
+		</div>
+		<div class="col-md-2">
+				<a href="/catalog/edititem/{{item.id}}">edit</a>
+		</div>
+	</div>
+	<div class="description">
+		<p> Description: {{item.description}} </p>
+	</div>
+	<div class="edit-delete text-center">
+		<a href="/catalog/edititem/{{item.id}}">Edit </a> | <a href="/catalog/deleteitem/{{item.id}}"> Delete </a>	
+</div>
+{% endblock %}

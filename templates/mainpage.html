@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+<div class="row">
+	<div class="col-md-2" id="catagories">
+	<h2> Catagories </h2>
+	{% for catagory in catagories %}
+		<div class="catagory"> <a href="/catalog/{{catagory.name}}/items">{{catagory.name}} </a> </div>
+	{% endfor %}	
+	</div>
+
+	<div class="col-md-8" id="items">
+		<h2> Latest Items </h2>
+		{% for item in items %}				
+			<div class="item"> <a href="/catalog/showitem/{{item.id}}"> {{item.name}} </a> - (<a href="/catalog/{{item.catagory_name}}/items">{{item.catagory_name}}</a>) <a href="/catalog/edititem/{{item.id}}">[edit]</a></div>
+		{% endfor %}	
+	</div>
+
+	<div class="col-md-2" id="new-item-button">
+		<a href="/catalog/newitem"> Add an Item </a>
+	</div>
+</div>
+</div>
+
+
+
+{% endblock %}
